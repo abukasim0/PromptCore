@@ -1,0 +1,61 @@
+<Window x:Class="PromptForge.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PromptForge" Width="820" Height="720" MinWidth="620" MinHeight="560" FontSize="14"
+        Background="{DynamicResource Brush.Bg}" Foreground="{DynamicResource Brush.Fg}">
+    <Window.InputBindings>
+        <KeyBinding Gesture="Ctrl+Shift+C" Command="{Binding CopyCommand}" />
+    </Window.InputBindings>
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Margin="0,0,0,16">
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                <Button Click="Theme_Click" Content="{DynamicResource Btn.Theme}" Padding="10,4" Margin="4,0" />
+                <Button Click="Lang_Click" Content="{DynamicResource Btn.Language}" Padding="10,4" />
+            </StackPanel>
+            <TextBlock Text="PromptForge" FontSize="24" FontWeight="SemiBold" Foreground="{DynamicResource Brush.Accent}" />
+        </DockPanel>
+
+        <TextBlock Grid.Row="1" Text="{DynamicResource Simple.Idea}" FontWeight="SemiBold" Margin="0,0,0,6" />
+        <TextBox Grid.Row="2" Text="{Binding Idea, UpdateSourceTrigger=PropertyChanged}" AcceptsReturn="True"
+                 TextWrapping="Wrap" Height="130" VerticalScrollBarVisibility="Auto" Padding="6" />
+
+        <Grid Grid.Row="3" Margin="0,16,0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="16" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <TextBlock Text="{DynamicResource Simple.Type}" FontWeight="SemiBold" Margin="0,0,0,6" />
+                <ComboBox ItemsSource="{Binding Types}" SelectedItem="{Binding SelectedType}" DisplayMemberPath="DisplayName" Padding="6"
+          Background="{DynamicResource Brush.Dropdown}" Foreground="{DynamicResource Brush.Fg}" />
+            </StackPanel>
+            <StackPanel Grid.Column="2">
+                <TextBlock Text="{DynamicResource Simple.Model}" FontWeight="SemiBold" Margin="0,0,0,6" />
+                <ComboBox ItemsSource="{Binding Models}" SelectedItem="{Binding SelectedModel}" DisplayMemberPath="Name" Padding="6"
+          Background="{DynamicResource Brush.Dropdown}" Foreground="{DynamicResource Brush.Fg}" />
+            </StackPanel>
+        </Grid>
+
+        <DockPanel Grid.Row="4">
+            <TextBlock DockPanel.Dock="Top" Text="{DynamicResource Simple.Result}" FontWeight="SemiBold" Margin="0,0,0,6" />
+            <TextBox Text="{Binding Result, Mode=OneWay}" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True"
+                     VerticalScrollBarVisibility="Auto" Padding="6" />
+        </DockPanel>
+
+        <DockPanel Grid.Row="5" Margin="0,16,0,0">
+            <TextBlock DockPanel.Dock="Right" Text="{Binding Status}" VerticalAlignment="Center" Foreground="{DynamicResource Brush.Accent}" />
+            <Button Content="{DynamicResource Btn.Copy}" Command="{Binding CopyCommand}" Padding="22,10" FontWeight="SemiBold"
+                    HorizontalAlignment="Left" />
+        </DockPanel>
+    </Grid>
+</Window>
