@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/PromptForge.Core/PromptForge.Core.csproj" />
+    <Project Path="src/PromptForge.Data/PromptForge.Data.csproj" />
     <Project Path="src/PromptForge.UI/PromptForge.UI.csproj" />
   </Folder>
   <Folder Name="/tests/">
