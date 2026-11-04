@@ -1,4 +1,4 @@
--- PromptForge library schema — reference DDL (as applied by DbMigrations.MigrationV1)
+-- PromptCore library schema — reference DDL (as applied by DbMigrations.MigrationV1)
 -- Managed automatically via PRAGMA user_version; do NOT run by hand on a real database.
 
 PRAGMA journal_mode = WAL;

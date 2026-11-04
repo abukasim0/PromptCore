@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PromptCore.Core/PromptCore.Core.csproj" />
+    <Project Path="src/PromptCore.Data/PromptCore.Data.csproj" />
+    <Project Path="src/PromptCore.UI/PromptCore.UI.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PromptCore.UnitTests/PromptCore.UnitTests.csproj" />
+  </Folder>
+</Solution>

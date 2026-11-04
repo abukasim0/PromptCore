@@ -46,6 +46,6 @@ Desktop.ini
 *.swp
 *~
 
-# ===== PromptForge local files =====
+# ===== PromptCore local files =====
 publish/
 *.zip

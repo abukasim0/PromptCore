@@ -1,0 +1,80 @@
+<Window x:Class="PromptCore.UI.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PromptCore" Icon="Assets/app.ico"
+        Width="460" SizeToContent="Height" ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner" ShowInTaskbar="False"
+        Background="{DynamicResource Brush.Bg}"
+        UseLayoutRounding="True" TextOptions.TextFormattingMode="Display">
+    <Border Background="{DynamicResource Brush.Panel}"
+            BorderBrush="{DynamicResource Brush.Border}" BorderThickness="1"
+            CornerRadius="12" Margin="10" Padding="26,22">
+        <StackPanel>
+
+            <!-- == App identity == -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,4">
+                <Image Source="Assets/icon-256.png" Width="64" Height="64"
+                       RenderOptions.BitmapScalingMode="HighQuality" />
+                <StackPanel Margin="14,0,0,0" VerticalAlignment="Center">
+                    <TextBlock Text="PromptCore" FontSize="24" FontWeight="Bold"
+                               Foreground="{DynamicResource Brush.Fg}" />
+                    <TextBlock Text="{DynamicResource About.Tagline}" FontSize="13"
+                               Foreground="{DynamicResource Brush.FgMuted}" Margin="0,2,0,0" />
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Text="{DynamicResource About.Version}" FontSize="12" Margin="0,0,0,14"
+                       Foreground="{DynamicResource Brush.FgSubtle}" HorizontalAlignment="Center" />
+
+            <!-- == Divider == -->
+            <Border Height="1" Background="{DynamicResource Brush.Border}" Margin="0,0,0,14" />
+
+            <!-- == Developer & links == -->
+            <TextBlock Text="{DynamicResource About.Developer}" Style="{StaticResource AboutRowLabel}" />
+            <TextBlock Text="Abu Kasim" Style="{StaticResource AboutRowValue}" FontWeight="SemiBold" />
+
+            <TextBlock Text="{DynamicResource About.GitHub}" Style="{StaticResource AboutRowLabel}" />
+            <TextBlock Style="{StaticResource AboutRowValue}">
+                <Hyperlink NavigateUri="https://github.com/abukasim0" RequestNavigate="Link_Click"
+                           Foreground="{DynamicResource Brush.Accent}">
+                    github.com/abukasim0
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock Text="{DynamicResource About.Telegram}" Style="{StaticResource AboutRowLabel}" />
+            <TextBlock Style="{StaticResource AboutRowValue}">
+                <Hyperlink NavigateUri="https://t.me/programs_edditing" RequestNavigate="Link_Click"
+                           Foreground="{DynamicResource Brush.Accent}">
+                    t.me/programs_edditing
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock Text="{DynamicResource About.Blog}" Style="{StaticResource AboutRowLabel}" />
+            <TextBlock Style="{StaticResource AboutRowValue}">
+                <Hyperlink NavigateUri="https://filefreesy.blogspot.com" RequestNavigate="Link_Click"
+                           Foreground="{DynamicResource Brush.Accent}">
+                    filefreesy.blogspot.com
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock Text="{DynamicResource About.Links}" Style="{StaticResource AboutRowLabel}" />
+            <TextBlock Style="{StaticResource AboutRowValue}">
+                <Hyperlink NavigateUri="https://linktr.ee/abukasim" RequestNavigate="Link_Click"
+                           Foreground="{DynamicResource Brush.Accent}">
+                    linktr.ee/abukasim
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock Text="{DynamicResource About.Contact}" Style="{StaticResource AboutRowLabel}" />
+            <TextBlock Style="{StaticResource AboutRowValue}">
+                <Hyperlink NavigateUri="https://t.me/Abu_Kasim" RequestNavigate="Link_Click"
+                           Foreground="{DynamicResource Brush.Accent}">
+                    @Abu_Kasim
+                </Hyperlink>
+            </TextBlock>
+
+            <!-- == Close == -->
+            <Button Style="{StaticResource AccentButton}" Content="{DynamicResource About.Close}"
+                    Padding="30,8" Margin="0,20,0,0" HorizontalAlignment="Center" Click="Close_Click" />
+        </StackPanel>
+    </Border>
+</Window>
