@@ -40,4 +40,21 @@
     <sys:String x:Key="Simple.Model">نموذج الذكاء الاصطناعي</sys:String>
     <sys:String x:Key="Simple.Result">البرومبت الجاهز</sys:String>
     <sys:String x:Key="Simple.Copied">تم النسخ ✓</sys:String>
+
+    <!-- Library panel -->
+    <sys:String x:Key="Btn.Save">حفظ</sys:String>
+    <sys:String x:Key="Btn.Library">المحفوظات</sys:String>
+    <sys:String x:Key="Library.Title">المحفوظات</sys:String>
+    <sys:String x:Key="Library.Search">ابحث في المحفوظات…</sys:String>
+    <sys:String x:Key="Library.Empty">لا يوجد شيء محفوظ بعد. اكتب فكرتك ثم اضغط «حفظ».</sys:String>
+    <sys:String x:Key="Library.Favorites">المفضلة فقط</sys:String>
+    <sys:String x:Key="Library.Load">تحميل</sys:String>
+    <sys:String x:Key="Library.Delete">حذف</sys:String>
+    <sys:String x:Key="Library.FavoriteOn">★</sys:String>
+    <sys:String x:Key="Library.FavoriteOff">☆</sys:String>
+    <sys:String x:Key="Library.Count">{0} برومبت</sys:String>
+    <sys:String x:Key="Msg.Saved">تم الحفظ ✓</sys:String>
+    <sys:String x:Key="Msg.Deleted">تم الحذف</sys:String>
+    <sys:String x:Key="Msg.Loaded">تم تحميل البرومبت إلى المحرر</sys:String>
+    <sys:String x:Key="Msg.NothingToSave">لا يوجد برومبت لحفظه بعد</sys:String>
 </ResourceDictionary>

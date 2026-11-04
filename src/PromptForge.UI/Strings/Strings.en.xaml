@@ -40,4 +40,21 @@
     <sys:String x:Key="Simple.Model">AI model</sys:String>
     <sys:String x:Key="Simple.Result">Your prompt</sys:String>
     <sys:String x:Key="Simple.Copied">Copied ✓</sys:String>
+
+    <!-- Library panel -->
+    <sys:String x:Key="Btn.Save">Save</sys:String>
+    <sys:String x:Key="Btn.Library">Library</sys:String>
+    <sys:String x:Key="Library.Title">Library</sys:String>
+    <sys:String x:Key="Library.Search">Search library…</sys:String>
+    <sys:String x:Key="Library.Empty">Nothing saved yet. Write an idea and press "Save".</sys:String>
+    <sys:String x:Key="Library.Favorites">Favorites only</sys:String>
+    <sys:String x:Key="Library.Load">Load</sys:String>
+    <sys:String x:Key="Library.Delete">Delete</sys:String>
+    <sys:String x:Key="Library.FavoriteOn">★</sys:String>
+    <sys:String x:Key="Library.FavoriteOff">☆</sys:String>
+    <sys:String x:Key="Library.Count">{0} prompts</sys:String>
+    <sys:String x:Key="Msg.Saved">Saved ✓</sys:String>
+    <sys:String x:Key="Msg.Deleted">Deleted</sys:String>
+    <sys:String x:Key="Msg.Loaded">Prompt loaded into the editor</sys:String>
+    <sys:String x:Key="Msg.NothingToSave">Nothing to save yet</sys:String>
 </ResourceDictionary>

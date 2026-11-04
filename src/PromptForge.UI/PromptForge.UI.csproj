@@ -14,5 +14,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PromptForge.Core\PromptForge.Core.csproj" />
+    <ProjectReference Include="..\PromptForge.Data\PromptForge.Data.csproj" />
   </ItemGroup>
 </Project>
