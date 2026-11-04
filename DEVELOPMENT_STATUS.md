@@ -1,29 +1,22 @@
-# DEVELOPMENT_STATUS
+# PromptForge — Development Status
 
-## Direction change
-The owner found the section builder + variables editor too complex. PromptForge is now ONE window:
-idea -> type -> AI model -> copy. The old Builder/variables screens are superseded and can be deleted.
+Last update: this file documents the state after the UI redesign + storage layer (branch `feature/ui-redesign-db`).
 
-## Verified
-- Core: prompt model, composer, variable engine, line diff, rule-based optimizer, PromptJson, ModelProfiles
+## Direction (unchanged)
+ONE window: idea -> type -> AI model -> copy. The old Builder/variables screens remain superseded.
+
+## Current state (verified)
+- Core: prompt model, composer, variable engine, line diff, rule-based optimizer, PromptJson, ModelProfiles — unchanged, still dependency-free
 - QuickPrompt: 8 task-specific prompt types, Arabic/English templates, model-specific layout
-- Tests: 25/25 passed; solution builds with no warnings or errors in the current workspace
-- UI shell: dark/light, EN/AR with RTL (previously run by the project owner on Windows)
-- Old Prompt Builder screen (superseded)
-
-## Current UI
-- Single-window screen: idea box, type, model, live result, copy, Ctrl+Shift+C
-- Prompt generation is template-based and does not call an AI service
-
-## Written, not yet built or run
-- Earlier update 4 (variables editor, fill dialog) was never confirmed and is superseded; its Core fix for duplicate variable keys is harmless
+- **Data (new)**: `PromptForge.Data` — SQLite (Microsoft.Data.Sqlite) with 5 tables (prompts, tags, prompt_tags, history, settings), versioned migrations (PRAGMA user_version), WAL mode, parameterized queries, cascade deletes
+- **UI (redesigned)**: Emerald Night / Emerald Day theme tokens (24 brushes), implicit styles for Button/TextBox/ComboBox/ScrollBar, collapsible library panel (search + favorites filter + copy/load/favorite/delete), persisted theme & language prefs in the settings table
+- Tests: **37/37 passed** (25 core + 12 storage); solution builds clean from scratch with zero warnings
+- Library location: `%AppData%\PromptForge\promptforge.db` (created and migrated automatically at startup)
 
 ## Not started
-Saving prompts, history, persisted settings, installer, templates beyond the 8 types
-
-## Known gaps
-- Language detection selects Arabic or English templates from the idea text; image prompts are intentionally requested in English
-- Default WPF control styling
+- History viewer UI (history table is written and queryable)
+- Templates beyond the 8 types; installer; FTS5 search index (LIKE search is sufficient at desktop scale)
 
 ## Next
-Run the updated UI and adjust the wording of the 8 types based on real use.
+- Run the updated UI on Windows and tune spacing
+- Optional: show recent history in the library panel footer
