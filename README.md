@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/banner.png" alt="PromptCore — مولّد برومبتات الذكاء الاصطناعي" width="100%" />
+<img src="docs/docs/banner.png" alt="PromptCore — مولّد برومبتات الذكاء الاصطناعي" width="100%" />
 
 # PromptCore
 
